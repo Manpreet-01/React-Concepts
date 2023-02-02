@@ -9,7 +9,7 @@ import HookCounterOne from "./HookCounterOne.js"
 const App = () => {
   return (
 		<div>
-		{/*<ClassCounterOne />*/}
+			<ClassCounterOne />
 			<HookCounterOne />
 		</div>
 	);

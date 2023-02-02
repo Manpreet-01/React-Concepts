@@ -12,12 +12,12 @@ class ClassCounterOne extends Component{
 	
 	componentDidMount(){
 		console.log(" class mount..")
-		document.title = `clicked ${this.state.count} times`;
+		document.title = this.state.count;
 	}
 	
 	componentDidUpdate(prevProps, prevState){
 		console.log("class update..")
-		document.title = `clicked ${this.state.count} times`;
+		document.title = this.state.count;
 	}
 	
 	render(){

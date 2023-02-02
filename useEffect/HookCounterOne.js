@@ -3,7 +3,7 @@ import "../styles/App.css";
 
 function HookCounterOne (){
 	const [count, setCount] = useState(0)
-	console.log("function render..")
+	console.log("HookCounterOne render..")
 	
 	useEffect(()=>{
 		console.log("effect hook fired")
