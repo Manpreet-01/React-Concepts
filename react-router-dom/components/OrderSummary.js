@@ -9,6 +9,7 @@ const OrderSummary = () => {
 			<div>
 				Order confirmed!
 			</div>
+			
 			<button onClick={()=>navigate(-1)}>Go back</button>
 		</>
 	);

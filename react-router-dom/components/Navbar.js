@@ -6,8 +6,10 @@ import About from "./About"
 
 const navLinkStyles=({isActive})=>{
 	return {
-		fontWeight: isActive ? "bold" : "normal",
-		textDecoration: isActive ? "none" : "underline"
+		margin: "10px",
+		fontWeight: isActive ? "boldest" : "normal",
+		textDecoration: isActive ? "underline" : "none",
+		color : isActive && "black"
 	}
 }
 

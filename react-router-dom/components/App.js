@@ -6,6 +6,7 @@ import ContactUs from "./ContactUs"
 import About from "./About"
 import OrderSummary from "./OrderSummary"
 import Navbar from "./Navbar"
+import PageNotFound from "./PageNotFound"
 
 //Router
 
@@ -14,10 +15,11 @@ const App = () => {
 		<div>
 			<Navbar />
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/contactus" element={<ContactUs />} />
-				<Route path='about' element={<About />} />
-				<Route path='order-summary' element={<OrderSummary />} />
+				<Route exact path="/" element={<Home />} />
+				<Route exact path="/contactus" element={<ContactUs />} />
+				<Route exact path='about' element={<About />} />
+				<Route exact path='order-summary' element={<OrderSummary />} />
+				<Route exact path='*' element={<PageNotFound />} />
 			</Routes>
 		</div>
 	);
