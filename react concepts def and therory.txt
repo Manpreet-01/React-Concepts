@@ -1,0 +1,47 @@
+
+You are given a function `componentDidMount()` which is a lifecycle method that allows us to execute the React code when the component is already placed in the DOM .
+
+This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered.
+
+
+
+
+
+In React, there are several lifecycle methods that a class component can implement to control the behavior of the component at various stages of its lifecycle. These methods are called in a specific order as the component mounts, updates, and unmounts. Here's a list of the main lifecycle methods in the order they are called:
+
+1. **constructor(props)**:
+   - This is the constructor method for the component, and it is called when the component is first created.
+   - You should call `super(props)` to inherit properties and methods from the parent class, and you can set up the initial state and bind event handlers.
+
+2. **static getDerivedStateFromProps(nextProps, prevState)**:
+   - This is a static method that is called when new props are received or before the initial render.
+   - It allows you to compute and return a new state object based on the new props and the previous state.
+
+3. **render()**:
+   - The `render` method is responsible for rendering the component's content.
+   - It is a required method and must return a React element, typically constructed with JSX.
+
+4. **componentDidMount()**:
+   - This method is called after the component has been inserted into the DOM.
+   - It is often used for tasks such as data fetching, setting up subscriptions, or manually changing the DOM.
+
+5. **shouldComponentUpdate(nextProps, nextState)**:
+   - This method is called before a component re-renders and allows you to control whether the component should update or not.
+   - You can compare the current and next props and state to decide if a re-render is necessary.
+
+6. **getSnapshotBeforeUpdate(prevProps, prevState)**:
+   - This method is called right before the most recent render result is committed to the DOM.
+   - It is often used to capture some information from the DOM, such as scroll positions, before changes are applied.
+
+7. **componentDidUpdate(prevProps, prevState, snapshot)**:
+   - This method is called after a component has been updated and re-rendered in the DOM.
+   - It is commonly used for tasks like making network requests based on prop changes or interacting with the DOM after an update.
+
+8. **componentWillUnmount()**:
+   - This method is called right before a component is removed from the DOM.
+   - It is used for cleanup tasks such as unsubscribing from data sources or timers to prevent memory leaks.
+
+These are the core lifecycle methods in class components. However, it's important to note that some of these methods, such as `componentWillMount`, `componentWillReceiveProps`, and `componentWillUpdate`, have been deprecated in recent versions of React, and you should use the newer methods like `componentDidMount`, `getDerivedStateFromProps`, and `componentDidUpdate` for similar functionality. Additionally, with the introduction of functional components and hooks, many of these lifecycle methods are less commonly used in modern React applications.
+
+
+

@@ -8,7 +8,7 @@ let key = 0;
 
 class App extends React.Component {
 	render() {
-		const colors = ["Red", "black", "green", "yellow"]
+		const colors = ["Red", "green", "blue", "yellow" , "black"];
 		const colorsList = colors.map(currColor => <li key={key++}>{currColor}</li>);
 		return (
 			<>
